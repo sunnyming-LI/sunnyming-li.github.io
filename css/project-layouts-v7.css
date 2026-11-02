@@ -1,7 +1,16 @@
 /* Content determines scale, grouping and reading order. */
 .project-story-v7 .story-hero--oritrio .source-figure img{width:100%;height:auto;max-height:none;object-fit:contain}
+.project-story-v7 .story-hero--willow .source-figure img{width:100%;height:auto;max-height:none;object-fit:contain}
+.project-story-v7 .story-hero--reciprocal .source-figure img{width:100%;height:auto;max-height:none;object-fit:contain}
 .project-story-v7 .story-module{margin-top:36px}
 .project-story-v7 .story-module:first-of-type{margin-top:0}
+/* Pair short setup descriptions with their own figures instead of full-width rows. */
+.project-story-v7 .story-module--split{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(32px,6vw,80px);align-items:start}
+.story-module-copy{max-width:400px;min-width:0}
+.story-module-copy h3{font:400 20px/1.35 var(--sans);margin:0}
+.story-module--split>.v7-gallery{margin-top:0;grid-template-columns:minmax(0,1fr)}
+.project-story-v7 .story-module--split .source-figure img{max-height:410px;width:100%;height:auto;object-fit:contain}
+[data-module="willow-panel"] .source-figure{width:min(100%,calc(410px * 962 / 1470));justify-self:center}
 .v7-gallery{display:grid;gap:22px 28px;align-items:start;margin-top:20px;min-width:0}
 .v7-gallery .source-figure{min-width:0}
 .project-story-v7 .v7-gallery img{width:100%;height:auto;max-height:520px;object-fit:contain}
@@ -125,6 +134,10 @@
 @media(max-width:1000px){.v7-gallery{gap:18px}.v7-gallery--paper7,.v7-gallery--site-sequence{grid-template-columns:repeat(7,minmax(0,1fr));gap:12px 8px}.project-story-v7 .v7-gallery--paper7 img,.project-story-v7 .v7-gallery--site-sequence img{height:85px}.umbrella-components{gap:24px}.umbrella-parts{gap:20px}.ranking-layout{gap:28px}.ranked-plan{gap:8px;font-size:16px}.matrix-columns,.matrix-row{grid-template-columns:75px repeat(4,minmax(0,1fr));gap:12px}.demonstration-grid{gap:14px}.demonstration-grid figcaption{font-size:14px}}
 @media(max-width:760px){
  .project-story-v7 .story-module{margin-top:28px}
+ .project-story-v7 .story-module--split{grid-template-columns:1fr;gap:18px}
+ .story-module-copy{max-width:none}.story-module-copy h3{font-size:19px}
+ .project-story-v7 .story-module--split .source-figure img{max-height:380px}
+ [data-module="willow-panel"] .source-figure{width:min(100%,calc(380px * 962 / 1470))}
  .v7-gallery--pair,.v7-gallery--hardware-pair,.v7-gallery--results-pair{grid-template-columns:1fr}
  .v7-gallery--compare3,.v7-gallery--diagrams3,.v7-gallery--catalog,.v7-gallery--photos3{grid-template-columns:repeat(2,minmax(0,1fr))}
  .project-story-v7 .v7-gallery--compare3 img,.project-story-v7 .v7-gallery--diagrams3 img{height:150px}
